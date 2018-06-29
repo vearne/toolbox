@@ -10,7 +10,7 @@
     </el-header>
 
     <!-- middle -->
-    <el-container>
+    <el-container >
       <el-aside width="200px">
           <el-menu>
             <el-menu-item index="1">
@@ -49,12 +49,11 @@
       </el-main>
     </el-container>
 
-    <!-- footer
+    <!-- footer -->
     <el-footer>
-     
-    </el-footer>
-     -->
      <the-footer></the-footer>
+    </el-footer>
+     
 
   </el-container>
   </div>
@@ -73,12 +72,18 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+  }
+
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    height:850px;
+  }
+  
+
 </style>

@@ -23,30 +23,14 @@
 
 
 <style  scoped>
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .bg-purple-light {
-    background: #e5e9f2;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
 .head {
-    background: #324057;
-    height: 4rem;
-    width: 100%;
     color: white;
-    padding:10px;
-    position: absolute;
-    top:0;
-    left:0;
 }
 .head img{
-    width: 5rem;
-    height: 3.5rem;
-    margin-left: 2rem;
+    width: 3rem;
+    height: 2.5rem;
+    margin-left: 3rem;
+    margin-top: 0.8rem;
     float:left;
 }
 </style>
