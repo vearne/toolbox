@@ -5,6 +5,7 @@ import TimeStamp from '@/components/ToolTimeStamp'
 import IP from '@/components/ToolIP'
 import Pinyin from '@/components/ToolPinyin'
 import Domain from '@/components/ToolDomain'
+import Tinyurl from '@/components/ToolTinyURL'
 
 Vue.use(Router)
 
@@ -43,6 +44,13 @@ export default new Router({
       name: 'pinyin',
       components: {
         main:Pinyin
+      }
+    },
+    {
+      path: '/tinyurl',
+      name: 'tinyurl',
+      components: {
+        main:Tinyurl
       }
     },
     {

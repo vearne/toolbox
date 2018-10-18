@@ -42,6 +42,13 @@
                   中文转拼音首字母
                 </router-link>
             </el-menu-item>  
+
+            <el-menu-item index="5">
+               <router-link to="/tinyurl">
+                  短网址服务
+                </router-link>
+            </el-menu-item>  
+
           </el-menu>
       </el-aside>
       <el-main>

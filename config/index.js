@@ -21,7 +21,7 @@ module.exports = {
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
     proxyTable: {
       '/api/**': {
-          target: 'http://localhost:9099',
+          target: 'http://tool.vearne.cc',
           changeOrigin: true,
       },
     },
