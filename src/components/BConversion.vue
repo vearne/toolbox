@@ -22,8 +22,6 @@
             </td>
             <td>
                 <textarea  rows="10" cols="40" v-model.trim="rightText"></textarea>
-
-                </el-input>
             </td>
         </tr>
         <tr>
@@ -44,8 +42,8 @@
     export default {
         name:"BConversion",
         props:[
-                "leftLabel1", "rightLabel1", 
-                "leftLabel2", "rightLabel2", 
+                "leftLabel1", "rightLabel1",
+                "leftLabel2", "rightLabel2",
                 "leftButton", "rightButton",
                 "leftParam", "rightParam",
                 "requestUrl",
@@ -86,7 +84,7 @@
                 }).then((response) => {
                     console.info(response.status)
                     console.info(response.data[this.leftParam])
-                    
+
                     if(response.status == 200){
                         this.leftText = response.data[this.leftParam]
                     }
