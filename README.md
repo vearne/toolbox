@@ -1,3 +1,8 @@
+### 安装依赖
+```
+yarn install
+```
+
 ### 启动本地服务
 ```
 yarn start
