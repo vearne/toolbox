@@ -23,6 +23,11 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
+  performance: {
+    hints: 'warning',
+    maxAssetSize: 1024 * 1024, // 1MB
+    maxEntrypointSize: 1024 * 1024 // 1MB
+  },
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
