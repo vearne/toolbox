@@ -13,9 +13,10 @@
     <el-container >
       <el-aside width="200px">
           <el-menu>
-            <el-menu-item index="1">
-              <router-link to="/mid-url">
-                微博mid-url互转
+
+            <el-menu-item index="2">
+              <router-link to="/base64">
+                base64转换
               </router-link>
             </el-menu-item>
 
@@ -48,6 +49,12 @@
                   短网址服务
                 </router-link>
             </el-menu-item>  
+
+            <el-menu-item index="1">
+              <router-link to="/mid-url">
+                微博mid-url互转
+              </router-link>
+            </el-menu-item>
 
           </el-menu>
       </el-aside>

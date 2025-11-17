@@ -6,6 +6,7 @@ import IP from '@/components/ToolIP'
 import Pinyin from '@/components/ToolPinyin'
 import Domain from '@/components/ToolDomain'
 import Tinyurl from '@/components/ToolTinyURL'
+import Base64 from '@/components/ToolBase64'
 
 Vue.use(Router)
 
@@ -58,6 +59,13 @@ export default new Router({
       name: 'domain',
       components: {
         main:Domain
+      }
+    },
+    {
+      path: '/base64',
+      name: 'base64',
+      components: {
+        main:Base64
       }
     }
   ]
