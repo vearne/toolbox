@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="pinyin-container">
       <OneWayConversion
           left-label1="中文内容"
           left-label2="形如: 西部世界"
@@ -10,7 +10,19 @@
           right-param="pinyin"
           request-url="/pinyin"
       ></OneWayConversion>
-      此服务对应的API免费供大众使用<br/><a href="https://ut-bucket01.sh1a.qingstor.com/tool/%E5%BC%80%E6%94%BEAPI.html" target="_blank">文档地址</a>
+      <div class="api-notice">
+        <el-alert
+          type="info"
+          :closable="false"
+          show-icon>
+          <template slot="title">
+            <span>此服务对应的API免费供大众使用 </span>
+            <a href="https://ut-bucket01.sh1a.qingstor.com/tool/%E5%BC%80%E6%94%BEAPI.html" target="_blank" class="doc-link">
+              <i class="el-icon-document"></i> 查看文档
+            </a>
+          </template>
+        </el-alert>
+      </div>
     </div>
 </template>
 
@@ -24,3 +36,35 @@ export default {
 }
 </script>
 
+<style scoped>
+.pinyin-container {
+  position: relative;
+}
+
+.api-notice {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.api-notice >>> .el-alert {
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.doc-link {
+  color: #409eff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.doc-link:hover {
+  color: #66a6ff;
+  transform: translateX(3px);
+}
+
+.doc-link i {
+  margin-right: 4px;
+}
+</style>
