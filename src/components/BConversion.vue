@@ -70,12 +70,14 @@
             forwardOp(){
                 var obj = new Object()
                 obj[this.leftParam] = this.leftText;
-                var rightParam = this.rightParam;
 
                 this.$http({
                     url: this.requestUrl,
                     method:'post',
-                    data: JSON.stringify(obj)
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    data: obj
                 }).then((response) => {
                     if(response.status == 200){
                         console.debug("ok");
@@ -92,7 +94,10 @@
                 this.$http({
                     url: this.requestUrl,
                     method:'post',
-                    data: JSON.stringify(obj)
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    data: obj
                 }).then((response) => {
                     console.info(response.status)
                     console.info(response.data[this.leftParam])

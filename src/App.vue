@@ -21,6 +21,13 @@
               </router-link>
             </el-menu-item>
 
+            <el-menu-item index="/upper-lower">
+              <router-link to="/upper-lower">
+                <i class="el-icon-document"></i>
+                <span>大小写转换</span>
+              </router-link>
+            </el-menu-item>
+
             <el-menu-item index="/timestamp">
               <router-link to="/timestamp">
                 <i class="el-icon-time"></i>

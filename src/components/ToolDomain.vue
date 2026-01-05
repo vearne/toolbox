@@ -88,13 +88,6 @@ export default {
             result: {},
         };
     },
-    // watch:{
-    //     result(val){
-    //         if(val){
-    //             this.loading  = false;
-    //         }
-    //     }
-    // },
     methods:{
         getDomainValue(){
             this.loading = true;
@@ -103,7 +96,10 @@ export default {
             this.$http({
                 url: "/domain",
                 method:'post',
-                data: JSON.stringify({"domain":this.domain})
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {"domain":this.domain}
             }).then((response) => {
                 if(response.status == 200){
                     this.result = response.data;

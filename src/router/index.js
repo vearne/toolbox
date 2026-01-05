@@ -7,6 +7,7 @@ import Pinyin from '@/components/ToolPinyin'
 import Domain from '@/components/ToolDomain'
 import Tinyurl from '@/components/ToolTinyURL'
 import Base64 from '@/components/ToolBase64'
+import UpperLower from '@/components/ToolUpperLower'
 
 Vue.use(Router)
 
@@ -66,6 +67,13 @@ export default new Router({
       name: 'base64',
       components: {
         main:Base64
+      }
+    },
+    {
+      path: '/upper-lower',
+      name: 'upperLower',
+      components: {
+        main:UpperLower
       }
     }
   ]
