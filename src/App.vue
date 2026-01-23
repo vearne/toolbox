@@ -63,6 +63,13 @@
               </router-link>
             </el-menu-item>
 
+            <el-menu-item index="/wechat-markdown">
+              <router-link to="/wechat-markdown">
+                <i class="el-icon-document"></i>
+                <span>微信Markdown转HTML</span>
+              </router-link>
+            </el-menu-item>
+
           </el-menu>
       </el-aside>
       <el-main>

@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import axios from 'axios';
+import VueClipboard from 'vue-clipboard2';
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.prototype.$http = axios;
@@ -12,6 +13,7 @@ axios.defaults.baseURL = 'api'
 // axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 Vue.use(ElementUI);
+Vue.use(VueClipboard);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
