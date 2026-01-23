@@ -26,6 +26,9 @@ yarn build            # Build for production (outputs to dist/)
 
 To add testing: Install Jest/Vitest and add test scripts to package.json.
 
+### Running Single Test
+Not available - no test framework configured. Install testing framework first.
+
 ---
 
 ## Code Style Guidelines
@@ -84,7 +87,7 @@ const myVar = 'value';  // Single quotes, semicolon
 ### Naming Conventions
 - **Components:** PascalCase (e.g., `ToolBase64.vue`, `TheHeader.vue`)
 - **Variables/Functions:** camelCase (e.g., `leftText`, `forwardOp()`)
-- **Props:** camelCase strings (e.g., `props: ["leftLabel", "rightButton"]`)
+- **Props:** camelCase in props array, kebab-case in templates (e.g., `props: ["leftLabel"]` → `left-label="..."`)
 - **Routes:** kebab-case paths (e.g., `/base64`, `/timestamp`)
 - **CSS classes:** kebab-case (e.g., `.conversion-container`)
 
@@ -109,6 +112,7 @@ this.$http({
 - Base URL: `'api'` (proxied to http://tool.vearne.cc in dev)
 - API proxy config: `config/index.js` -> `proxyTable`
 - Use `JSON.stringify()` for request bodies
+- Modify `config/dev.env.js` for environment variables
 
 ### Styling
 - Use `scoped` attribute for component-specific styles
