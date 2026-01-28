@@ -7,6 +7,7 @@ import Pinyin from '@/components/ToolPinyin'
 import Domain from '@/components/ToolDomain'
 import Tinyurl from '@/components/ToolTinyURL'
 import Base64 from '@/components/ToolBase64'
+import WeChatMarkdown from '@/components/ToolWeChatMarkdown'
 
 Vue.use(Router)
 
@@ -66,6 +67,13 @@ export default new Router({
       name: 'base64',
       components: {
         main:Base64
+      }
+    },
+    {
+      path: '/wechat-markdown',
+      name: 'wechat-markdown',
+      components: {
+        main:WeChatMarkdown
       }
     }
   ]
