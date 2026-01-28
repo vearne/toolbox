@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-          target: 'http://tool.vearne.cc',
+          target: 'http://localhost:9099',
           changeOrigin: true,
           pathRewrite: {'^/api' : '/api'}
       },

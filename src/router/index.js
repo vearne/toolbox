@@ -8,6 +8,7 @@ import Domain from '@/components/ToolDomain'
 import Tinyurl from '@/components/ToolTinyURL'
 import Base64 from '@/components/ToolBase64'
 import WeChatMarkdown from '@/components/ToolWeChatMarkdown'
+import UpperLower from '@/components/ToolUpperLower'
 
 Vue.use(Router)
 
@@ -74,6 +75,10 @@ export default new Router({
       name: 'wechat-markdown',
       components: {
         main:WeChatMarkdown
+      path: '/upper-lower',
+      name: 'upperLower',
+      components: {
+        main:UpperLower
       }
     }
   ]
