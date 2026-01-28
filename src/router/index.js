@@ -75,6 +75,9 @@ export default new Router({
       name: 'wechat-markdown',
       components: {
         main:WeChatMarkdown
+      }
+    },
+    {
       path: '/upper-lower',
       name: 'upperLower',
       components: {

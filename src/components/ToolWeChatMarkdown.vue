@@ -963,7 +963,7 @@ export default {
             borderRadius: 4,
             marginBottom: 20
           }
-        }
+        },
         {
           styleName: '护眼绿',
           global: {
