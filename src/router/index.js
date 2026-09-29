@@ -7,6 +7,7 @@ import Pinyin from '@/components/ToolPinyin'
 import Domain from '@/components/ToolDomain'
 import Tinyurl from '@/components/ToolTinyURL'
 import Base64 from '@/components/ToolBase64'
+import UrlEncode from '@/components/ToolUrlEncode'
 import WeChatMarkdown from '@/components/ToolWeChatMarkdown'
 import UpperLower from '@/components/ToolUpperLower'
 
@@ -68,6 +69,13 @@ export default new Router({
       name: 'base64',
       components: {
         main:Base64
+      }
+    },
+    {
+      path: '/url-encode',
+      name: 'url-encode',
+      components: {
+        main:UrlEncode
       }
     },
     {
