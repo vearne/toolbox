@@ -59,6 +59,7 @@
                 "leftButton", "rightButton",
                 "leftParam", "rightParam",
                 "requestUrl",
+                "forwardFn", "reverseFn",
                 ],
         data(){
             return {
@@ -67,7 +68,22 @@
             };
         },
         methods:{
+            runLocal(fn, input, assign){
+                if(!input){
+                    this.$message.warning('请输入内容');
+                    return;
+                }
+                try{
+                    assign(fn(input));
+                }catch(e){
+                    this.$message.error(e && e.message ? e.message : '转换失败');
+                }
+            },
             forwardOp(){
+                if(typeof this.forwardFn === 'function'){
+                    this.runLocal(this.forwardFn, this.leftText, (v) => { this.rightText = v; });
+                    return;
+                }
                 var obj = new Object()
                 obj[this.leftParam] = this.leftText;
 
@@ -88,6 +104,10 @@
                 });
             },
             reverseOp(){
+                if(typeof this.reverseFn === 'function'){
+                    this.runLocal(this.reverseFn, this.rightText, (v) => { this.leftText = v; });
+                    return;
+                }
                 var obj = new Object()
                 obj[this.rightParam] = this.rightText;
 

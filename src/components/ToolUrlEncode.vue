@@ -2,27 +2,27 @@
   <BConversion
     left-label1="原始文本"
     left-label2="比如 'hello world'"
-    right-label1="base64编码后的文本"
-    right-label2="aGVsbG8gd29ybGQ="
+    right-label1="URL编码后的文本"
+    right-label2="hello%20world"
     left-button="encode"
     right-button="decode"
-    :forward-fn="encodeBase64"
-    :reverse-fn="decodeBase64"
+    :forward-fn="encodeUrl"
+    :reverse-fn="decodeUrl"
   ></BConversion>
 </template>
 
 <script>
 import BConversion from './BConversion';
-import { encodeBase64, decodeBase64 } from '@/utils/base64';
+import { encodeUrl, decodeUrl } from '@/utils/urlEncode';
 
 export default {
-  name: 'Base64',
+  name: 'UrlEncode',
   components: {
     BConversion
   },
   methods: {
-    encodeBase64,
-    decodeBase64
+    encodeUrl,
+    decodeUrl
   }
 }
 </script>

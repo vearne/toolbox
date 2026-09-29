@@ -6,19 +6,23 @@
     right-label2="hello-world"
     left-button="大写转小写"
     right-button="小写转大写"
-    left-param="upperString"
-    right-param="lowerString"
-    request-url="/upper_lower_case"
+    :forward-fn="toLower"
+    :reverse-fn="toUpper"
   ></BConversion>
 </template>
 
 <script>
 import BConversion from './BConversion';
+import { toLower, toUpper } from '@/utils/caseConvert';
+
 export default {
   name: 'UpperLower',
-  components:{
-    BConversion,
+  components: {
+    BConversion
+  },
+  methods: {
+    toLower,
+    toUpper
   }
 }
 </script>
-

@@ -21,6 +21,13 @@
               </router-link>
             </el-menu-item>
 
+            <el-menu-item index="/url-encode">
+              <router-link to="/url-encode">
+                <i class="el-icon-document"></i>
+                <span>url-encode转换</span>
+              </router-link>
+            </el-menu-item>
+
             <el-menu-item index="/upper-lower">
               <router-link to="/upper-lower">
                 <i class="el-icon-document"></i>
