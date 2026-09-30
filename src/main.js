@@ -7,6 +7,7 @@ import ElementUI from 'element-ui'
 import axios from 'axios';
 import VueClipboard from 'vue-clipboard2';
 import 'element-ui/lib/theme-chalk/index.css'
+import './styles/theme.css'
 
 Vue.prototype.$http = axios;
 axios.defaults.baseURL = 'api'

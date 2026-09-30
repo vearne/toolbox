@@ -1,7 +1,15 @@
 <template>
     <div class="head">
         <div class="header-content">
-            <div class="logo-section">     
+            <button
+                type="button"
+                class="menu-toggle"
+                :aria-expanded="sidebarOpen ? 'true' : 'false'"
+                aria-label="菜单"
+                @click="$emit('toggle-sidebar')">
+                <i :class="sidebarOpen ? 'el-icon-s-fold' : 'el-icon-s-unfold'"></i>
+            </button>
+            <div class="logo-section">
                 <router-link to="/" class="logo-link">
                     <img src='../assets/logo.png' title='logo'/>
                     <span class="logo-text">萌叔的工具箱</span>
@@ -20,7 +28,8 @@
 
 <script>
 export default {
-    name: 'TheHeader'
+    name: 'TheHeader',
+    props: ['sidebarOpen']
 }
 </script>
 
@@ -28,8 +37,9 @@ export default {
 <style scoped>
 .head {
     width: 100%;
-    height: 80px;
-    color: white;
+    height: var(--header-height);
+    color: var(--color-text);
+    font-family: var(--font-ui);
 }
 
 .header-content {
@@ -40,42 +50,59 @@ export default {
     margin: 0 auto;
     padding: 0 30px;
     height: 100%;
+    gap: 12px;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--color-text);
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 18px;
+    padding: 0;
+}
+
+.menu-toggle:hover {
+    background: #fff;
+    color: var(--color-primary);
 }
 
 .logo-section {
     flex: 1;
+    min-width: 0;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
 }
 
 .logo-link:hover {
-    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 .logo-link img {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.logo-link:hover img {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    transform: rotate(5deg);
+    box-shadow: 0 2px 8px rgba(40, 70, 100, 0.12);
 }
 
 .logo-text {
-    margin-left: 15px;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    margin-left: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
 .header-title {
@@ -85,27 +112,31 @@ export default {
 
 .header-title h1 {
     margin: 0;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    opacity: 0.95;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
 }
 
 .header-title i {
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 @media (max-width: 768px) {
     .header-content {
         padding: 0 15px;
     }
-    
-    .logo-text {
-        font-size: 18px;
+
+    .menu-toggle {
+        display: inline-flex;
     }
-    
+
+    .logo-text {
+        font-size: 17px;
+    }
+
     .header-title h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 </style>
