@@ -33,14 +33,15 @@
             </el-col>
         </el-row>
         <div class="button-section">
-            <el-button 
-                type="primary" 
+            <el-button
+                type="primary"
+                class="btn-primary"
                 @click='forwardOp'
                 size="large">
                 {{leftButton}}
             </el-button>
-            <el-button 
-                type="success" 
+            <el-button
+                class="btn-secondary"
                 @click='reverseOp'
                 size="large">
                 {{rightButton}}
@@ -136,30 +137,32 @@
 
 <style scoped>
 .conversion-container {
-    padding: 20px;
+    padding: 4px 0;
 }
 
 .input-section {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .section-header {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e8f4f8;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .section-header h3 {
-    margin: 0 0 8px 0;
-    font-size: 18px;
-    color: #303133;
-    font-weight: 600;
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: var(--font-ui);
 }
 
 .section-hint {
     font-size: 13px;
-    color: #909399;
-    font-style: italic;
+    color: var(--color-text-muted);
+    font-style: normal;
 }
 
 .custom-textarea {
@@ -167,51 +170,66 @@
 }
 
 .custom-textarea >>> .el-textarea__inner {
-    border-radius: 8px;
-    border: 2px solid #e4e7ed;
-    padding: 15px;
+    border-radius: var(--radius-control);
+    border: 1px solid var(--color-border);
+    padding: 14px;
     font-size: 15px;
     line-height: 1.6;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    color: var(--color-text);
 }
 
 .custom-textarea >>> .el-textarea__inner:focus {
-    border-color: #66a6ff;
-    box-shadow: 0 0 0 3px rgba(102, 166, 255, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-soft);
 }
 
 .button-section {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px dashed #dcdfe6;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
 }
 
 .button-section .el-button {
-    padding: 14px 40px;
-    font-size: 16px;
-    border-radius: 25px;
-    font-weight: 500;
-    margin: 0 10px;
-    box-shadow: 0 4px 12px rgba(102, 166, 255, 0.3);
-    transition: all 0.3s ease;
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: var(--radius-control);
+    font-weight: 600;
+    margin: 0 8px;
+    font-family: var(--font-ui);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.button-section .el-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(102, 166, 255, 0.4);
+.button-section .btn-primary,
+.button-section .el-button--primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.button-section .btn-primary:hover,
+.button-section .el-button--primary:hover {
+    background: #095aa9;
+    border-color: #095aa9;
+    transform: translateY(-1px);
+}
+
+.button-section .btn-secondary {
+    background: var(--color-secondary-bg);
+    border-color: var(--color-secondary-bg);
+    color: #334155;
+}
+
+.button-section .btn-secondary:hover {
+    background: #dce5f0;
+    border-color: #dce5f0;
+    color: var(--color-text);
+    transform: translateY(-1px);
 }
 
 .button-section .el-button:active {
     transform: translateY(0);
-}
-
-.button-section .el-button--success {
-    box-shadow: 0 4px 12px rgba(103, 194, 58, 0.3);
-}
-
-.button-section .el-button--success:hover {
-    box-shadow: 0 6px 16px rgba(103, 194, 58, 0.4);
 }
 </style>

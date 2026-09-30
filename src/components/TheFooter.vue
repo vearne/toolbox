@@ -36,10 +36,11 @@ export default {
 <style scoped>
 .foot {
     width: 100%;
-    color: white;
+    color: var(--color-text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-ui);
 }
 
 .footer-content {
@@ -48,14 +49,13 @@ export default {
 
 .copyright {
     margin: 0 0 8px 0;
-    font-size: 14px;
-    opacity: 0.9;
-    letter-spacing: 0.5px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
 }
 
 .divider {
     margin: 0 10px;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .footer-links {
@@ -64,17 +64,15 @@ export default {
 }
 
 .footer-link {
-    color: white;
+    color: var(--color-text-muted);
     text-decoration: none;
-    margin: 0 15px;
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    margin: 0 14px;
+    transition: color 0.2s ease;
     display: inline-block;
 }
 
 .footer-link:hover {
-    opacity: 1;
-    transform: translateY(-2px);
+    color: var(--color-primary);
 }
 
 .footer-link i {
@@ -85,11 +83,11 @@ export default {
     .copyright {
         font-size: 12px;
     }
-    
+
     .footer-links {
         font-size: 11px;
     }
-    
+
     .footer-link {
         margin: 0 8px;
     }
