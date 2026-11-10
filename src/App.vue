@@ -35,6 +35,20 @@
               </router-link>
             </el-menu-item>
 
+            <el-menu-item index="/qrcode" @click="closeSidebarOnMobile">
+              <router-link to="/qrcode">
+                <i class="el-icon-picture-outline"></i>
+                <span>二维码生成</span>
+              </router-link>
+            </el-menu-item>
+
+            <el-menu-item index="/qrcode-decode" @click="closeSidebarOnMobile">
+              <router-link to="/qrcode-decode">
+                <i class="el-icon-view"></i>
+                <span>二维码识别</span>
+              </router-link>
+            </el-menu-item>
+
             <el-menu-item index="/upper-lower" @click="closeSidebarOnMobile">
               <router-link to="/upper-lower">
                 <i class="el-icon-document"></i>

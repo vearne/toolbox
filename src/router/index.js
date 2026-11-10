@@ -10,6 +10,8 @@ import Base64 from '@/components/ToolBase64'
 import UrlEncode from '@/components/ToolUrlEncode'
 import WeChatMarkdown from '@/components/ToolWeChatMarkdown'
 import UpperLower from '@/components/ToolUpperLower'
+import QRCode from '@/components/ToolQRCode'
+import QRCodeDecode from '@/components/ToolQRCodeDecode'
 
 Vue.use(Router)
 
@@ -90,6 +92,20 @@ export default new Router({
       name: 'upperLower',
       components: {
         main:UpperLower
+      }
+    },
+    {
+      path: '/qrcode',
+      name: 'qrcode',
+      components: {
+        main:QRCode
+      }
+    },
+    {
+      path: '/qrcode-decode',
+      name: 'qrcode-decode',
+      components: {
+        main:QRCodeDecode
       }
     }
   ]
